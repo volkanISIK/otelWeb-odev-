@@ -1,0 +1,22 @@
+
+.aktif{
+     border:none;
+    background-color: green;
+    opacity: 0.6;
+}
+.aktif:hover{
+    color:white;
+    opacity: 1;
+}
+
+
+
+.pasif{
+     border:none;
+    background-color: red;
+    
+}
+.pasif:hover{
+    color:white;
+
+}

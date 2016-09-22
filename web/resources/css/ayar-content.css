@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#contentİmageContener{
+    margin:0;
+    padding:0;
+   width:1600px;
+    height:1000px;
+    overflow: hidden;
+    position:relative;
+}
+#contentİmageContener .contentİmage{
+    margin-left:-29px;
+    width:1600px;
+    height:1000px;
+
+}
+#contentİmageContener .slides{
+    display:block;
+    width:10000px;
+    height:1000px;
+}
+
+#contentİmageContener .slide{
+    width:1600px;
+    height:1000px;
+    float:left;
+}
+#yaziVeTarih{
+    position:absolute;
+    top:40px;
+    
+}
+#yazi{
+    width:40%;
+    float:left;
+    margin:60px;
+    padding:60px;
+    background-color: white;
+    border-radius: 6px;
+    opacity: 0.8;
+    box-shadow: 0px 0px 15px white;
+    margin-left: 175px;
+}
+#yazi h1{
+    font-size:400%;
+    opacity: none;
+}
+#yazi p{
+    font-size:200%;
+    opacity: 1;
+    line-height: 150%;
+}
+#tarih{
+    width:15%;
+    float:left;
+    margin:60px;
+    padding:10px;
+    background-color: white;
+     border-radius: 6px;
+     opacity: 0.8;
+   box-shadow: 0px 0px 15px white;
+}

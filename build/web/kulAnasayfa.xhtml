@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="title">Hoşgeldiniz...</ui:define>
+            <ui:define name="content">            
+                <div id="contentİmageContener">
+                    <ul  class="slides">
+                        <li class="slide"><h:graphicImage value="resources/images/coast.jpg" class="contentİmage" /></li>
+                        <li class="slide"><h:graphicImage value="resources/images/restorant.jpg" class="contentİmage" /></li>
+                        <li class="slide"><h:graphicImage value="resources/images/otel.jpg" class="contentİmage" /></li>
+                        <li class="slide"><h:graphicImage value="resources/images/poker.png" class="contentİmage" /></li>
+                        <li class="slide"><h:graphicImage value="resources/images/coast.jpg" class="contentİmage" /></li>
+                    </ul>
+
+                    <div id="yaziVeTarih">
+                        <div id="yazi">
+                            <h1>Otelimize Hoşgeldiniz</h1>
+                            <br />
+                            <p>Kalieli hizmetleri ve Uygun fiyatları...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus justo, suscipit at arcu gravida, rutrum pellentesque eros. Pellentesque lobortis felis sit amet ligula efficitur pharetra. Integer rhoncus porta diam at vulputate. Proin ac sem viverra, sagittis orci ac, mattis arcu. Phasellus a sem a sapien pulvinar tempor in vel nulla. Duis tempor, nulla et faucibus rhoncus, ipsum ipsum venenatis ipsum, at commodo arcu lectus et mauris.</p>
+                        </div>
+
+                        <div id="tarih">
+                            <h:form>
+                                <h:outputLabel value="Check in " /><br /><br />
+                                <h:inputText value="#{check.checkIn}" > 
+                                    <f:passThroughAttribute name="data-uk-datepicker" value="{format:'DD-MM-YYYY'}" />
+                                </h:inputText>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <br />
+                                <h:outputLabel value="Check out " /><br /><br />
+                                <h:inputText value="#{check.checkOut}" > 
+                                    <f:passThroughAttribute name="data-uk-datepicker" value="{format:'DD-MM-YYYY'}" />
+                                </h:inputText>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <br /><br />
+
+
+                                <h:outputLabel value="Kisi Sayisi " />
+                                <h:selectOneMenu value="#{check.kisiSayisi}">
+                                    <f:selectItem itemValue="1" itemLabel="1" />
+                                    <f:selectItem itemValue="2" itemLabel="2" />
+                                    <f:selectItem itemValue="3" itemLabel="3" />
+                                    <f:selectItem itemValue="4" itemLabel="4" />
+                                    <f:selectItem itemValue="5" itemLabel="5" />
+                                    <f:selectItem itemValue="6" itemLabel="6" />
+                                </h:selectOneMenu><br /><br />
+                                
+                                <h:commandButton value="oda ara"  type="submit" action="#{navigasyon.odaArayaGit()}" styleClass="k0Button"></h:commandButton>
+                                <br />
+                                <h:outputText value="#{navigasyon.odaAraHatasi1}" style="color:red;"></h:outputText>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,13 @@
+.well{
+    background-color: ghostwhite;
+}
+.uzat{
+   width:33.33%;
+   height:inherit;
+}
+.formGiris{
+    width:80%;
+    height:inherit;
+    background-color: black;
+    margin:0 auto;
+}

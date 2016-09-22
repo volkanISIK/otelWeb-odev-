@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+
+
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="title">Rezarvasyon</ui:define>
+
+            <ui:define name="content">
+                <br />
+                <div id="k0Wrapper">
+                    <div class="rezarvasyonBilgileri">
+                        <h3>Rezarvasyon Bilgileri</h3>
+
+                        <h:outputText value="check in tarihi:"></h:outputText>
+                        <h:outputText value="#{check.checkIn}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="check out tarihi:"></h:outputText>
+                        <h:outputText value="#{check.checkOut}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Kişi Sayisi:"></h:outputText><br />
+                        <h:outputText value="#{check.kisiSayisi}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Oda Tipi:"></h:outputText><br />
+                        <h:outputText value="#{check.odaTipi}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Toplam Ucreti:"></h:outputText>
+                        <h:outputText value="#{check.toplamUcretiAl()}"><i class="fa fa-try" aria-hidden="true" /></h:outputText><br /><hr class="style-one" />
+
+                    </div>
+
+
+                    <h:form styleClass="k0Form">
+
+                        <table cellspacing="10" cellpadding="10">
+                            <tr>
+                                <td><h:outputLabel value="HESAP NUMARANIZ"></h:outputLabel></td>
+                                <td><h:inputText value="#{bankaIslemi.kulHesapNumarasi}"> </h:inputText></td>
+                            </tr>
+                            <tr>
+                                <td> <h:outputLabel value="HESAP SIFRENIZ"></h:outputLabel></td>
+                                <td><h:inputText value="#{bankaIslemi.kulHesapSifresi}"> </h:inputText><br /></td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <h:commandButton value="Onayla" type="submit"  action="#{bankaIslemi.parametre()}" styleClass="k0Button">
+                                        <f:param name="ucret" value="#{check.toplamUcretiAl()}" />
+                                    </h:commandButton>
+                                </td>
+                            </tr> 
+                        </table><br />
+                        
+                        <h:outputText value="#{bankaIslemi.hata}" style="color:red;"></h:outputText>
+                    </h:form> 
+
+                </div>
+
+
+            </ui:define>
+
+
+        </ui:composition>
+    </h:body>
+</html>

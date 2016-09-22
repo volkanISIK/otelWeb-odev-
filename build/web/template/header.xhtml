@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <div id="headerContener">
+                
+                    <div id="imageContener">
+                        <h:graphicImage value="resources/images/logo.png" id="menuLogo" width="50px" height="40px" />
+                    </div>
+                
+                    <div id="formContener">
+                        <h:form id="form">     
+                            <ul class="headerMenu">
+                                <div class="liContener">
+                                    <li class="headerLi"><h:commandLink class=" headerLink active #{navigasyon.anasayfaAktif}" value='Anasayfa' action="#{navigasyon.anasayfayaGit()}" ></h:commandLink></li> 
+                                    <li class="headerLi"><h:commandLink class="headerLink #{navigasyon.odalarAktif}" value='Odalar' action="#{navigasyon.odalarSayfasinaGit()}"></h:commandLink></li>
+                                    <li class="headerLi"><h:commandLink class="headerLink" value='Resim Galeri' action="#"></h:commandLink></li> 
+                                    <li class="headerLi"><h:commandLink class="headerLink" value='Hizmetler' action="#" style="text-align: center;"></h:commandLink></li> 
+                                    <li class="headerLi"><h:commandLink class="headerLink" value='Ulaşım' action="#"></h:commandLink></li> 
+                                    <li class="headerLi"><h:commandLink class="headerLink" value='Iletişim' action="#"></h:commandLink></li> 
+                                    <li class="headerLi"> <h:commandButton class="headerButton" value='Hemen Rezervasyon' action="kayit-0Demo.xhtml?faces-redirect=true"></h:commandButton> </li>
+                                </div>
+                            </ul>
+
+                        </h:form>
+                        
+                    </div>
+            </div>
+	    </ui:composition>
+    </h:body>
+</html>
+

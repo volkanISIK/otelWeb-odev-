@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+
+
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="title">Rezarvasyon</ui:define>
+
+            <ui:define name="content">
+                <br />
+                <div id="k0Wrapper">
+                    <div class="rezarvasyonBilgileri">
+                        <h3>Rezarvasyon Bilgileri</h3>
+
+                        <h:outputText value="check in tarihi:"></h:outputText>
+                        <h:outputText value="#{check.checkIn}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="check out tarihi:"></h:outputText>
+                        <h:outputText value="#{check.checkOut}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Kişi Sayisi:"></h:outputText><br />
+                        <h:outputText value="#{check.kisiSayisi}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Oda Tipi:"></h:outputText><br />
+                        <h:outputText value="#{check.odaTipi}"></h:outputText><br /><hr class="style-one" />
+                        <h:outputText value="Toplam Ucreti:"></h:outputText>
+                        <h:outputText value="#{check.toplamUcretiAl()}"><i class="fa fa-try" aria-hidden="true" /></h:outputText><br /><hr class="style-one" />
+
+                    </div>
+
+
+                    <h:form styleClass="k0Form">
+                        <h:panelGrid columns="2">
+                            <h:outputLabel value="Adi" />
+                            <h:inputText value="#{check.adi}" ></h:inputText>
+                            <h:outputLabel value="Soy Adi" />
+                            <h:inputText value="#{check.soyAdi}" ></h:inputText>
+                            <h:outputLabel value="Tc kimlik" />
+                            <h:inputText value="#{check.tcKimlik}" maxlength="16" ></h:inputText>
+                            <h:outputLabel value="E mail" />
+                            <h:inputText value="#{check.email}" ></h:inputText>
+                            <h:outputLabel value="Telefon" />
+                            <h:inputText value="#{check.telefon}" ></h:inputText>
+                            <h:outputLabel value="adres " />
+                            <h:inputTextarea value="#{check.adres}"></h:inputTextarea>
+
+                        </h:panelGrid>
+                        <h:commandButton value="Odeme islemleri" type="submit" action="kayit-3Demo" styleClass="k0Button"></h:commandButton>
+                        
+                    </h:form> 
+
+                </div>
+
+                <h:form>
+
+
+                </h:form> 
+
+
+            </ui:define>
+
+
+        </ui:composition>
+    </h:body>
+</html>

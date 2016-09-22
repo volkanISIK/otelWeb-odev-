@@ -1,0 +1,44 @@
+
+body{
+    background-color: white;
+}
+
+#odalarContent{
+    width:100%;
+    margin:0 auto;
+    min-height: 500px;
+    background-color: white;
+}
+#odalarContentIci{
+    width:80%;
+    margin:0 auto;
+    min-height: 1500px;
+}
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.odalarRow{
+    
+}
+.odalarColumn{
+    float:left;
+    margin-right:150px;
+    position:relative;
+}
+.odaLink{
+    text-align: center;
+    padding:10px 22px;
+    background-color: black;
+    color:white;
+    position:absolute;
+    top:50px;
+    
+}
+.odaLink:hover{
+    
+    color:blue;
+    text-decoration: none;
+}

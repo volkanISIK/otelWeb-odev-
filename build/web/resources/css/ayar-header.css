@@ -1,0 +1,142 @@
+
+
+/*==========HIYERARŞİK SIRA============*/
+#headerContener{
+    height:100%;
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    background-color:white;
+    
+    
+}
+    #imageContener{
+         
+        width:100%;
+        height:70%;
+       
+    }
+        #menuLogo{
+            
+            
+            display: block;
+            margin:0 auto;
+            width:20%;
+            height:100%;
+        }    
+        
+    #formContener{
+        width:100%;
+        height:30%;
+        
+    }
+        #form{
+              width:100%;
+              height:100%;
+              
+        }
+            ul.headerMenu{
+              
+                width:80%;
+                height:80%;
+                margin:0 auto;
+                list-style-type: none;
+              
+            }
+                
+            .liContener{
+                
+                margin:0 auto;
+            }
+                li.headerLi{
+                     background-color: #16226c;  
+                    /* padding:2px;*/
+                    padding-top:1px;
+                     
+                }
+                    .headerLink{
+                            margin-top:35px;
+                            font-family:Lucida Sans Unicode;
+                            display:block;
+                            text-align:center;
+                            width:150px;
+                            float:left;
+                            font-size:110%;
+                            color:#0090c7;
+                            transition:color 0.5s;
+                            margin-left:5px;
+                            margin-right:5px;
+                            word-spacing: 13px;
+                            margin-left:0;
+                            margin-right: 20px;
+                            padding-bottom:10px;
+                            text-decoration: none;
+                            font-weight: 900;
+                    }
+                    
+                    .headerButton{
+                        margin-top:20px;
+                        
+                        background-color: #0090c7;
+                        display:block;
+                        text-align:center;
+                        width:220px;
+                        float:right;
+                        height:50px;
+                        color:#35352b;
+                        border:2px solid #35352b;
+                        -webkit-transition: width 2s; /* Safari */
+                        transition: background-color 0.3s,color 0.1s,border 0.2s;
+                        color:ghostwhite;
+                        font-size: 110%;
+                        padding:0;
+                        word-spacing: 10px;
+                    }
+                    
+                    
+                    
+/*=============BUNDAN SONRASI BAZI CLASSLAR =================*/
+
+/*.active{
+   
+    color:#f7b800;
+     border-bottom: 5px solid #0090c7;
+}*/
+            
+.headerLink:hover{
+    
+    border-bottom: 5px solid #0090c7;
+    color:#f7b800;
+    text-decoration: none;
+    
+}
+.headerButton:hover{
+   background-color: black;
+    color:goldenrod;
+    cursor:pointer;
+  
+}
+
+.headerLink::after{
+    content: '';
+    width:2px;
+    height: 45px;
+    background-color: #0090c7;
+    position: absolute;
+    margin-left:45px;
+    margin-top:-8px;
+    color: #0090c7;
+    -ms-transform: rotate(40deg); /* IE 9 */
+    -webkit-transform: rotate(40deg); /* Safari */
+    transform: rotate(40deg);
+}
+
+.isaretle{
+    color:#f7b800;
+     border-bottom: 5px solid #0090c7;
+}
+
+.isaretleme{
+    color:#35352b;
+     border-bottom: none;
+}

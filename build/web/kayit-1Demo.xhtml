@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+
+
+        <ui:composition template="template/template.xhtml">
+            <ui:define name="title">Rezarvasyon</ui:define>
+
+            <ui:define name="content">
+
+                <div id="odalarContent2" >
+                    <div id="odalarContentIci" >
+                        <br /><br />
+                        <h1 >Suit oda</h1>
+                        <hr class="style-one"/>
+                        <div class="odalarRow">
+                            <div class="odalarColumn">
+                                <h:graphicImage value="resources/images/oda1.jpg"  />
+                            </div>
+                            <div class="odalarColumn">
+                                <h3>Suit oda</h3>
+                                <br />
+                                <li style="list-style-type: square;">Büyüklük 150 metre kare.</li>
+                                <li style="list-style-type: square;">3 yatak.</li>
+                                <li style="list-style-type: square;">6 kişi kapasiteli</li>
+                                <hr class="style-one"/>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <i class="fa fa-television" aria-hidden="true"></i>
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <i class="fa fa-ambulance" aria-hidden="true"></i>
+
+                            </div>
+                            <div class="odalarColumn">
+                                <h1 style="display:inline;">150</h1>  <i class="fa fa-try" aria-hidden="true" ></i>
+                                <h:form>
+                                    <h:commandButton  styleClass="odaLink #{odaDurumu3.suitOdaDurumu()}" value= "#{odaDurumu2.suitOdaDurumu()}"  type="submit" action="#{check.suitOdaTut()}" disabled="#{odaDurumu.suitOdaDurumu()}" ></h:commandButton>
+                                </h:form>
+                            </div>
+                        </div>
+                        <br style="clear:both;" /><br />
+                        <h1 >Standart Oda</h1>
+                        <hr class="style-one"/>
+                        <div class="odalarRow" >
+                            <div class="odalarColumn">
+                                <h:graphicImage value="resources/images/oda2.jpg"  />
+                            </div>
+                            <div class="odalarColumn">
+                                <h3>Standart Oda</h3>
+                                <br />
+                                <li style="list-style-type: square;">Büyüklük 60 metre kare.</li>
+                                <li style="list-style-type: square;">1 yatak.</li>
+                                <li style="list-style-type: square;">2 kişi kapasiteli</li>
+                                <hr class="style-one"/>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <i class="fa fa-television" aria-hidden="true"></i>
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <i class="fa fa-ambulance" aria-hidden="true"></i>
+                            </div>
+                            <div class="odalarColumn">
+                                <h1 style="display:inline;">120</h1>  <i class="fa fa-try" aria-hidden="true" ></i>
+                                <h:form>
+                                    <h:commandButton  styleClass="odaLink #{odaDurumu3.standartOdaDurumu()}" value="#{odaDurumu2.standartOdaDurumu()}"  type="submit" action="#{check.standartOdaTut()}" disabled="#{odaDurumu.standartOdaDurumu()}"></h:commandButton>
+                                </h:form>
+                            </div>
+                        </div>
+                        <br style="clear:both;" /><br />
+                        <h1 >Lux Suit Oda</h1>
+                        <hr class="style-one"/>
+                        <div class="odalarRow">
+                            <div class="odalarColumn">
+                                <h:graphicImage value="resources/images/oda3.jpg"  />
+                            </div>
+                            <div class="odalarColumn">
+                                <h3>Lux Suit Oda</h3>
+                                <br />
+                                <li style="list-style-type: square;">Büyüklük 150 metre kare.</li>
+                                <li style="list-style-type: square;">3 yatak.</li>
+                                <li style="list-style-type: square;">6 kişi kapasiteli</li>
+                                <hr class="style-one"/>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <i class="fa fa-television" aria-hidden="true"></i>
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <i class="fa fa-ambulance" aria-hidden="true"></i>
+                            </div>
+                            <div class="odalarColumn">
+                                <h1 style="display:inline;">200</h1>  <i class="fa fa-try" aria-hidden="true" ></i>
+                                <h:form>
+                                    <h:commandButton  styleClass="odaLink #{odaDurumu3.luxSuitOdaDurumu()}" value="#{odaDurumu2.luxSuitOdaDurumu()}"  type="submit" action="#{check.luxSuitOdaTut()}" disabled="#{odaDurumu.luxSuitOdaDurumu()}"></h:commandButton>
+                                </h:form>
+                            </div>
+
+                        </div>
+                        <br style="clear:both;" /><br />
+                        <h1 >Lux Standart Oda</h1>
+                        <hr class="style-one"/>
+                        <div class="odalarRow">
+                            <div class="odalarColumn">
+                                <h:graphicImage value="resources/images/oda3.jpg"  />
+                            </div>
+                            <div class="odalarColumn">
+                                <h3>Lux Standart Oda</h3>
+                                <br />
+                                <li style="list-style-type: square;">Büyüklük 60 metre kare.</li>
+                                <li style="list-style-type: square;">3 yatak.</li>
+                                <li style="list-style-type: square;">3 kişi kapasiteli</li>
+                                <hr class="style-one"/>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <i class="fa fa-television" aria-hidden="true"></i>
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <i class="fa fa-ambulance" aria-hidden="true"></i>
+                            </div>
+                            <div class="odalarColumn">
+                                <h1 style="display:inline;">180</h1>  <i class="fa fa-try" aria-hidden="true" ></i>
+                                <h:form>
+                                    <h:commandButton styleClass="odaLink #{odaDurumu3.luxStandartOdaDurumu()}" value="#{odaDurumu2.luxStandartOdaDurumu()}"  type="submit" action="#{check.luxStandartOdaTut()}" disabled="#{odaDurumu.luxStandartOdaDurumu()}"></h:commandButton>
+                                </h:form>
+                            </div>
+
+                        </div>
+                        <br style="clear:both;" /><br />
+                        <h1 >Delux Suit Oda</h1>
+                        <hr class="style-one"/>
+                        <div class="odalarRow">
+                            <div class="odalarColumn">
+                                <h:graphicImage value="resources/images/oda1.jpg"  />
+                            </div>
+                            <div class="odalarColumn">
+                                <h3>Delux Suit Oda</h3>
+                                <br />
+                                <li style="list-style-type: square;">Büyüklük 300 metre kare.</li>
+                                <li style="list-style-type: square;">4 yatak.</li>
+                                <li style="list-style-type: square;">8 kişi kapasiteli</li>
+                                <hr class="style-one"/>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                <i class="fa fa-television" aria-hidden="true"></i>
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                <i class="fa fa-ambulance" aria-hidden="true"></i>
+                            </div>
+                            <div class="odalarColumn">
+                                <h1 style="display:inline;">277</h1>  <i class="fa fa-try" aria-hidden="true" ></i>
+                                <h:form>
+                                    <h:commandButton styleClass="odaLink #{odaDurumu3.deluxSuitOdaDurumu()}"  value="#{odaDurumu2.deluxSuitOdaDurumu()}"  type="submit" action="#{check.deluxSuitOdaTut()}" disabled="#{odaDurumu.deluxSuitOdaDurumu()}"></h:commandButton>
+                                </h:form>
+                            </div>
+
+                        </div>
+                        <br style="clear:both;" /><br />
+
+
+
+                    </div> 
+                </div>
+
+
+            </ui:define>
+
+
+        </ui:composition>
+    </h:body>
+</html>
+

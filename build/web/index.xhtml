@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+                text-decoration: none;
+
+            } 
+            body{
+
+                background-color:#777;
+            }
+            #box{
+                width:40%;
+                height:200px;
+                margin:0 auto;
+                border:4px solid #574e45;
+                border-radius: 6px;
+                margin-top:200px;
+                background-color: #333;
+                box-shadow: 2px 7px 9px;
+
+            }
+            #boxHeader{
+                widt:100%;
+                height:70px;
+                background-color: #283533;
+            }
+            #boxHeader h1{
+
+                color:white;
+                text-align: center;
+                background-color:blue;
+                padding:15px;
+            }
+            .link{
+                background-color: #8cc14c;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;	
+                text-decoration: none;
+                display: inline-block;
+                margin:50px;
+                border:2px solid black;
+                border-radius: 6px;
+            }
+            .link:hover{
+ 
+                background-color: #f44300;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <div id="box">
+                <div id="boxHeader">
+                    <h1>OTEL OTOMASYONU</h1>
+                </div>
+                <h:commandLink style="margin-left:110px;" styleClass="link" value="Kullanıcı Anasayfası" action="kulAnasayfa"></h:commandLink>
+                <h:commandLink styleClass="link" value="Admin Anasayfası" action="#{navigasyon.adminSayfasinaGit()}"></h:commandLink>
+            </div>
+
+        </h:form>
+    </h:body>
+</html>
+
